@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>verify otp</title>
+</head>
+<body>
+
+    {% with messages = get_flashed_messages() %}
+        {% if messages %}
+            {% for msg in messages %}
+                <p>{{msg}}</p>
+            {% endfor %}
+        {% endif %}
+    {% endwith %}
+    <br>
+    <br>
+    {{otpee}}
+    <form action="#" method="post" autocomplete="off">
+        <p>Enter the OTP sent to your mobile number</p>
+        <input type="text" name="otpentered">
+        <input type="submit" value="submit">
+    </form>
+</body>
+</html>

@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>confirm Delete</title>
+</head>
+<body>
+
+    {% with messages = get_flashed_messages() %}
+        {% if messages %}
+            {% for msg in messages %}
+                <p>{{msg}}</p>
+            {% endfor %}
+        {% endif %}
+    {% endwith %}
+
+    <h1>Sure to delete??</h1>
+    <form action="#" method="post" autocomplete="off">
+        <input type="submit" value="Delete">
+    </form>
+</body>
+</html>
